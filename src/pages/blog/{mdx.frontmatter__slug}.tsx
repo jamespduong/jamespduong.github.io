@@ -3,7 +3,9 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { graphql } from "gatsby";
 
-const BlogPost = ({ data, children }) => {
+const BlogPost = (props) => {
+  console.log("props", props);
+  const { data, children } = props;
   console.log("data", data);
   console.log("children", children);
   return (

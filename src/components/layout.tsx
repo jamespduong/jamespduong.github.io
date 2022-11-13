@@ -22,9 +22,9 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className={container}>
-      <nav>
-        <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-        <ul className={navLinks}>
+      {/* <nav> */}
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+      {/* <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
               Home
@@ -41,9 +41,9 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        {/* <h1 className={heading}>{pageTitle}</h1> */}
         {children}
       </main>
     </div>
