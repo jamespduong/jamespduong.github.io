@@ -28,7 +28,16 @@ const config: GatsbyConfig = {
         path: `${__dirname}/projects`,
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-external-links`,
+          },
+        ],
+      },
+    },
   ],
 };
 
