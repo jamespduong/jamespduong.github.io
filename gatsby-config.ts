@@ -1,9 +1,11 @@
 import type { GatsbyConfig } from "gatsby";
 
+const siteUrl = `https://jamespduong.github.io`;
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "James Duong",
-    siteUrl: `https://jdonga.github.io/`,
+    siteUrl,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -17,6 +19,13 @@ const config: GatsbyConfig = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `projects`,
+        path: `${__dirname}/projects`,
       },
     },
     "gatsby-plugin-mdx",

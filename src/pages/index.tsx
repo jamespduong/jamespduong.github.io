@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Layout from "../components/layout";
@@ -11,6 +12,8 @@ const socialLinks = [
   },
 ];
 
+const projectLinks = [{ name: "jLearn", link: "jlearn" }];
+
 const IndexPage = () => {
   return (
     <Layout pageTitle="About">
@@ -20,6 +23,12 @@ const IndexPage = () => {
       />
       <h1>About</h1>
       <p>Hi, I build websites.</p>
+      <h1>Projects</h1>
+      {projectLinks.map(({ name, link }) => (
+        <li key={name}>
+          <Link to={`/projects/${link}`}>{name}</Link>
+        </li>
+      ))}
       <h1>Links</h1>
       {socialLinks.map(({ name, link }) => (
         <li key={name}>
