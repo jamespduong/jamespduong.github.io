@@ -1,15 +1,8 @@
+import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  siteTitle,
-} from "./layout.module.css";
-import "./global.css";
-import { Link, useStaticQuery, graphql } from "gatsby";
 import { DarkModeToggle } from "./dark-mode-toggle";
+import "../styles/global.css";
+import { container, siteTitle } from "../styles/global.module.css";
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`

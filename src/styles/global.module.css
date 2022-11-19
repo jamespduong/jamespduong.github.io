@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+:root {
+  --spacing: 4;
+}
+
 .container {
   margin: auto;
   max-width: 500px;
@@ -26,4 +30,14 @@
   color: gray;
   font-weight: 700;
   margin: 3rem 0;
+}
+
+.dark-mode-button {
+  margin-left: auto;
+  width: calc(var(--spacing) * 10px);
+  height: calc(var(--spacing) * 10px);
+}
+
+.flex-container {
+  display: flex;
 }

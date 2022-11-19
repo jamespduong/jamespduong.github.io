@@ -1,19 +1,20 @@
 import React from "react";
 import useDarkMode from "use-dark-mode";
-
-// import Toggle from "./Toggle";
+import { darkModeButton, flexContainer } from "../styles/global.module.css";
 
 export const DarkModeToggle = () => {
   const darkMode = useDarkMode(false);
-  console.log("darkMode", darkMode);
 
   const isDarkMode = darkMode.value;
   return (
-    <div>
-      <button type="button" onClick={darkMode.toggle}>
+    <div className={flexContainer}>
+      <button
+        className={darkModeButton}
+        type="button"
+        onClick={darkMode.toggle}
+      >
         {isDarkMode ? "☀" : "☾"}
       </button>
-      {/* <Toggle checked={darkMode.value} onChange={darkMode.toggle} /> */}
     </div>
   );
 };
