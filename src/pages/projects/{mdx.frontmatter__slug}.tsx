@@ -3,8 +3,15 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { graphql } from "gatsby";
 
-const ProjectPost = (props: any) => {
+interface Props {
+  data: Queries.GetMDXQuery;
+  children: JSX.Element;
+}
+
+const ProjectPost = (props: Props) => {
   const { data, children } = props;
+
+  if (!data?.mdx?.frontmatter) return null;
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -15,7 +22,7 @@ const ProjectPost = (props: any) => {
 };
 
 export const query = graphql`
-  query ($id: String) {
+  query GetMDX($id: String) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title

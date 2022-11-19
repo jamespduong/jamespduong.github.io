@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const socialLinks = [
-  { name: "Github", link: "https://github.com/jdonga" },
+  { name: "Github", link: "https://github.com/jamespduong" },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/james-duong-9168a89a/",
