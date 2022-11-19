@@ -21,7 +21,7 @@ const Layout = ({ pageTitle, children }) => {
   `);
 
   return (
-    <div className={container}>
+    <div className={container} data-sal="fade" data-sal-duration="2000">
       {/* <nav> */}
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       {/* <ul className={navLinks}>
