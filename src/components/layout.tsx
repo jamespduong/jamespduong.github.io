@@ -7,7 +7,9 @@ import {
   navLinkText,
   siteTitle,
 } from "./layout.module.css";
+import "./global.css";
 import { Link, useStaticQuery, graphql } from "gatsby";
+import { DarkModeToggle } from "./dark-mode-toggle";
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -23,6 +25,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container} data-sal="fade" data-sal-duration="2000">
       {/* <nav> */}
+      <DarkModeToggle />
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       {/* <ul className={navLinks}>
           <li className={navLinkItem}>
