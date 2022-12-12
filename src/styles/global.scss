@@ -18,6 +18,11 @@ body {
   padding: 2rem;
 }
 
+h1,
+h2 {
+  font-family: "Montserrat";
+}
+
 p,
 span,
 button {
@@ -27,25 +32,19 @@ button {
 h1 {
   font-size: 1.75rem;
   font-weight: 800;
-}
-
-h1,
-h2 {
-  font-family: "Montserrat";
+  &::after {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    width: 1rem;
+    content: "";
+    height: 2px;
+    background-color: black;
+    display: block;
+  }
 }
 
 h2 {
   margin-bottom: 1rem;
-}
-
-h1::after {
-  margin-top: 0.75rem;
-  margin-bottom: 1rem;
-  width: 1rem;
-  content: "";
-  height: 2px;
-  background-color: black;
-  display: block;
 }
 
 .navbar {
@@ -53,11 +52,11 @@ h1::after {
   align-items: center;
   margin-bottom: 4rem;
   column-gap: 1rem;
-}
 
-.navbar > span {
-  font-size: 1.5rem;
-  font-weight: bold;
+  & > span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
 
 section {
@@ -71,8 +70,8 @@ section {
 }
 
 .avatar {
-  height: 4rem;
-  width: 4rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .skill {
@@ -92,18 +91,18 @@ section {
 .project {
   padding: calc(var(--spacing) * 6px);
   position: relative;
-}
 
-.project p {
-  margin-bottom: 20px;
-  font-size: 0.75rem;
-}
+  p {
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+  }
 
-.project-card-nav-icon {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translatey(-50%);
+  &-card-nav-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translatey(-50%);
+  }
 }
 
 button {
@@ -115,22 +114,24 @@ button {
   padding: 0.5rem 1rem;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
-.copyright {
-  font-size: 0.75rem;
-}
-
-.social-icon:hover {
-  cursor: pointer;
+.hover {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .social-links {
   margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
 }
 
 /* body.light-mode {

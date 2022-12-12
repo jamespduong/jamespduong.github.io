@@ -7,18 +7,7 @@ import { SkillCards } from "../components/skill-card";
 import { Copyright } from "../components/copyright";
 import { ProjectCard } from "../components/project-card";
 import { Section } from "../components/section";
-import { SocialLinks } from "../components/social-links";
 import { Navbar } from "../components/navbar";
-
-const socialLinks = [
-  { name: "Github", link: "https://github.com/jamespduong" },
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/james-duong-9168a89a/",
-  },
-];
-
-const projectLinks = [{ name: "jLearn", link: "jlearn" }];
 
 const IndexPage = () => {
   return (
@@ -43,7 +32,6 @@ const IndexPage = () => {
         <Header title="Skills" />
         <SkillCards />
       </Section>
-      <SocialLinks />
       <Copyright />
     </Layout>
   );

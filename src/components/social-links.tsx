@@ -20,7 +20,7 @@ export const SocialLinks = () => {
   const renderLinks = () => {
     return links.map(({ Icon, link }) => (
       <Icon
-        className="social-icon"
+        className="hover"
         size={28}
         key={link}
         onClick={() => handleClick(link)}

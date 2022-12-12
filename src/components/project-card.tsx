@@ -28,7 +28,9 @@ export const ProjectCard = () => {
     <div className="project card">
       <h2>{title}</h2>
       <p>{description}</p>
-      <button onClick={() => handleLinkClick(link)}>View</button>
+      <button className="hover" onClick={() => handleLinkClick(link)}>
+        View
+      </button>
       {hasMoreThanOneProject && (
         <GrNext
           className="project-card-nav-icon"

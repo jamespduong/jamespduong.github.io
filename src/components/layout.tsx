@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import { DarkModeToggle } from "./dark-mode-toggle";
-import "../styles/global.css";
+import "../styles/global.scss";
 import { container, siteTitle } from "../styles/global.module.css";
 
 const Layout = ({ pageTitle, children }) => {
