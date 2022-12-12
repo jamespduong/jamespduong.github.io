@@ -1,8 +1,14 @@
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import { Header } from "../components/header";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import { SkillCards } from "../components/skill-card";
+
+import { Copyright } from "../components/copyright";
+import { ProjectCard } from "../components/project-card";
+import { Section } from "../components/section";
+import { SocialLinks } from "../components/social-links";
+import { Navbar } from "../components/navbar";
 
 const socialLinks = [
   { name: "Github", link: "https://github.com/jamespduong" },
@@ -17,26 +23,28 @@ const projectLinks = [{ name: "jLearn", link: "jlearn" }];
 const IndexPage = () => {
   return (
     <Layout pageTitle="About">
-      <StaticImage
+      <Section>
+        <Navbar />
+        <Header title="About" />
+        <p>
+          Hi there. I’m James, a Full Stack Developer based in Sydney. I’m
+          passionate in building aesthetic and optimised websites.
+        </p>
+      </Section>
+      {/* <StaticImage
         alt="corgi, sleeping on the floor"
         src="../images/corgi.jpg"
-      />
-      <h1>About</h1>
-      <p>Hi, I build websites.</p>
-      <h1>Projects</h1>
-      {projectLinks.map(({ name, link }) => (
-        <li key={name}>
-          <Link to={`/projects/${link}`}>{name}</Link>
-        </li>
-      ))}
-      <h1>Links</h1>
-      {socialLinks.map(({ name, link }) => (
-        <li key={name}>
-          <a href={link} target="_blank">
-            {name}
-          </a>
-        </li>
-      ))}
+      /> */}
+      <Section>
+        <Header title="Projects" />
+        <ProjectCard />
+      </Section>
+      <Section>
+        <Header title="Skills" />
+        <SkillCards />
+      </Section>
+      <Copyright />
+      <SocialLinks />
     </Layout>
   );
 };

@@ -108,5 +108,6 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*"
-  ]
+  ],
+  "files": ["globals.d.ts"]
 }

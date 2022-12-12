@@ -13,6 +13,14 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-use-dark-mode",
+    // {
+    //   resolve: "gatsby-plugin-react-svg",
+    //   options: {
+    //     rule: {
+    //       include: /images/,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
     },

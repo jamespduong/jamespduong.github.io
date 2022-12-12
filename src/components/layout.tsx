@@ -18,8 +18,8 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container} data-sal="fade" data-sal-duration="2000">
       {/* <nav> */}
-      <DarkModeToggle />
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+      {/* <DarkModeToggle /> */}
+      {/* <header className={siteTitle}>{data.site.siteMetadata.title}</header> */}
       {/* <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
