@@ -43,8 +43,8 @@ const IndexPage = () => {
         <Header title="Skills" />
         <SkillCards />
       </Section>
-      <Copyright />
       <SocialLinks />
+      <Copyright />
     </Layout>
   );
 };

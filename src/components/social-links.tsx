@@ -1,10 +1,14 @@
 import React from "react";
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const links = [
   {
     Icon: AiFillLinkedin,
     link: "https://www.linkedin.com/in/james-duong-9168a89a/",
+  },
+  {
+    Icon: AiFillGithub,
+    link: "https://github.com/jpduong",
   },
 ];
 
@@ -15,7 +19,12 @@ export const SocialLinks = () => {
 
   const renderLinks = () => {
     return links.map(({ Icon, link }) => (
-      <Icon size={20} key={link} onClick={() => handleClick(link)} />
+      <Icon
+        className="social-icon"
+        size={28}
+        key={link}
+        onClick={() => handleClick(link)}
+      />
     ));
   };
 
