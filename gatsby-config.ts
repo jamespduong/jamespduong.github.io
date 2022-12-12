@@ -1,6 +1,6 @@
 import type { GatsbyConfig } from "gatsby";
 
-const siteUrl = `https://jamespduong.github.io`;
+const siteUrl = `https://jpduong.github.io`;
 
 const config: GatsbyConfig = {
   siteMetadata: {
