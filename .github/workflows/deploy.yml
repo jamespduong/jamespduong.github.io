@@ -20,9 +20,11 @@ jobs:
       #     gatsby-args: --prefix-paths
 
       - uses: actions/checkout@v3
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          token: ${{ secrets.ACCESS_TOKEN }}
+        - run: git config user.name "jd bot"
+        - run: git config user.email "james.duong93@gmail.com"
+        # with:
+          # access-token: ${{ secrets.ACCESS_TOKEN }}
+          # token: ${{ secrets.ACCESS_TOKEN }}
       # - uses: fregante/setup-git-user@v1
       - uses: actions/setup-node@v3
         with:
