@@ -1,20 +1,16 @@
 import React from "react";
 import useDarkMode from "use-dark-mode";
-import { darkModeButton, flexContainer } from "../styles/global.module.css";
+import { BsBrightnessLowFill } from "react-icons/bs";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 export const DarkModeToggle = () => {
   const darkMode = useDarkMode(false);
-
   const isDarkMode = darkMode.value;
+
+  const Icon = isDarkMode ? BsBrightnessLowFill : MdOutlineDarkMode;
   return (
-    <div className={flexContainer}>
-      <button
-        className={darkModeButton}
-        type="button"
-        onClick={darkMode.toggle}
-      >
-        {isDarkMode ? "☀" : "☾"}
-      </button>
+    <div>
+      <Icon className={"dark-mode-button hover"} onClick={darkMode.toggle} />
     </div>
   );
 };

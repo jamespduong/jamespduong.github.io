@@ -20,10 +20,6 @@ const IndexPage = () => {
           passionate in building aesthetic and optimised websites.
         </p>
       </Section>
-      {/* <StaticImage
-        alt="corgi, sleeping on the floor"
-        src="../images/corgi.jpg"
-      /> */}
       <Section>
         <Header title="Projects" />
         <ProjectCard />

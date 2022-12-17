@@ -1,11 +1,15 @@
 import React from "react";
-import Avatar from "../images/avatar.svg";
+import { FaGlasses } from "react-icons/fa";
+import { DarkModeToggle } from "./dark-mode-toggle";
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
-      <img src={Avatar} className="avatar" />
-      <span>James Duong</span>
+      <div className="flex flex-aic">
+        <FaGlasses className="icon" />
+        <span>jd.</span>
+      </div>
+      <DarkModeToggle />
     </nav>
   );
 };
